@@ -1,0 +1,15 @@
+/* body {
+  color: red;
+  background: wheat;
+  width: 700px;
+  height: 70px;
+} */
+
+.first{
+background-color: #f6f4f4;
+margin-top:50px;
+width: 100%;
+height: auto;
+flex-direction: row;
+display: flex;
+}
