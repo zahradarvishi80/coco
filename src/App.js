@@ -5,7 +5,7 @@ import Details from "./Page/Details";
 import "./styles.css"
 const App=()=> {
   return (
-    <div>
+    <div className="background">
      
       <Routes>
         <Route path="/" element={<Home />} />
@@ -15,5 +15,3 @@ const App=()=> {
   );
 }
 export default App
-
-// instagramId

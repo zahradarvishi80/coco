@@ -1,32 +1,48 @@
+.background{
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+.ground{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
 
+}
 .first{
 background-color: #d9d6d7;
 /* margin-top:10px; */
-width: 100%;
+width: 85%;
 height: auto;
 flex-direction: row;
 display: flex;
+margin-bottom: 50px;
 }
 .head{
 display: flex;
 flex-direction: row;
 justify-content: space-around;
+width: 80%;
 
 }
 .p{
   font-size: 15px;
   /* background-color: aqua; */
   text-align: center;
+  font-weight: bold;
 }
 .explain{
 font-size: 15px;
 /* margin-right: 30px; */
 /* background-color: aqua; */
+font-weight: bold;
 margin-top: -10px;
 }
 .div{
 margin-top: 20px;
-/* background-color: red; */
+
 
 }
 .Engaged{
@@ -140,9 +156,7 @@ padding: 1px;
   border-radius: 20px;
   /* margin:3px; */
   padding: 1px;
-  
-  
-  
+
   }
 .icon{
   width: 20px;
@@ -152,7 +166,7 @@ padding: 1px;
   /* size: 20px; */
 }
 .position{
-  font-size: 12px;
+  font-size: 10px;
   /* margin-top: -9px; */
   color: black;
   /* align-items: center; */
@@ -164,3 +178,139 @@ padding: 1px;
   display: flex;
   margin-left: 5px;
 }
+/* in Details page */
+.header{
+display: flex;
+width: 100%;
+/* background-color: pink; */
+height: auto;
+flex-direction: row;
+}
+.profile{
+  width: 110px;
+  height: 110px;
+  border-radius: 110px;
+  margin: 30px;
+  border: 2px solid blue;
+  display: flex;
+  padding: 2px
+}
+.instaid{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2px;
+}
+.instagramId{
+font-size: 18px;
+color: rgb(32, 95, 155);
+margin-top: 50px;
+
+}
+.fullName{
+font-weight: bold;
+font-size: 20px;
+color: black;
+margin-top: -5px;
+}
+.Details{
+  display: flex;
+  flex-direction: column;
+}
+.degree{
+  display: flex;
+  width: 100%;
+  height: auto;
+  /* background-color: aqua; */
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.boxx{
+width: 20%;
+height: 120px;
+border: 1px solid grey;
+background-color: white;
+border-radius: 20px;
+}
+.box1{
+  width: 20%;
+  height: 120px;
+  border: 1px solid grey;
+  background-color: #1E5EFD;
+  border-radius: 20px;
+  flex-direction: column;
+  }
+  .Followers{
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 20px;
+    
+  }
+  .Followers1{
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .Following1{
+    color: black;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .Following{
+    color: black;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .engagement{
+    color: black;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .Rate{
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .box2{
+    width: 20%;
+    height: 120px;
+    /* border: 3px solid grey; */
+    background-color: rgb(84, 240, 206);
+    border-radius: 20px;
+    }
+    .box5{
+      width: 20%;
+      height: 120px;
+      /* border: 3px solid grey; */
+      background-color: rgb(233, 229, 8);
+      border-radius: 20px;
+      }
+    .box3{
+      width: 20%;
+      height: 120px;
+      /* border: 3px solid grey; */
+      background-color: rgb(255, 95, 67);
+      border-radius: 20px;
+      }
+    .postPerDay{
+      font-weight: bold;
+      margin-left: 20px;
+      font-size: 25px;
+      margin-left: 30px;
+    }
+    .Post{
+      font-weight: bold;
+      margin-left: 20px;
+      font-size: 18px;
+      margin-left: 30px;
+    }

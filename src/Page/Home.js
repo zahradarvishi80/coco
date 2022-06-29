@@ -4,7 +4,7 @@ import Followers from "../Component/Followers";
 import "../styles.css"
 const Home=()=>{
     return (
-         <div>
+         <div className="ground">
              <div className="head">
         <div className="div">
           <p className="p">Leaders in Engagement</p>

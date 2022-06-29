@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import {Link} from "react-router-dom";
 import { AiOutlineMore } from "react-icons/ai";
 import { IoIosCafe } from "react-icons/io";
+
 import "../styles.css"
 const option=[
   {item_name:"Art"},
@@ -11,8 +12,7 @@ const option=[
 
 const Engaded=()=>{
     const[engage,setEngage]=useState([])
-    // const navigate=useNavigate() 
-  
+
     useEffect(()=>{
         const engaged=()=>{
             fetch('https://new-api.coco.gl/dashboard/intw/top/engaged')
@@ -25,6 +25,8 @@ const Engaded=()=>{
         }
         engaged()
       },[])
+     
+
     return(
       <div className="Engaged">
       
@@ -43,14 +45,19 @@ const Engaded=()=>{
                    <nav>
                    <Link to={`Details/${item.instagramId}`}>
                      <div className="img1">
-                      {/* {
-                        if (alt==="profile") {
-                          
-                        } else {
-                          
-                        }
-                      } */}
-                     <img className="img" alt="profile" src={item.profilePic}/></div>
+                  
+                     {/* <img 
+                     onerror=" this.src="
+                    /> */}
+                      <img 
+                       className="img"
+                       alt="profile" src={item.profilePic}
+                      onError={(e)=>{
+                        e.target.src = 'https://www.stregasystem.com/img/users/user.png'
+                      }}
+                      
+                    />
+                    </div>
                     </Link>
                    </nav> 
 

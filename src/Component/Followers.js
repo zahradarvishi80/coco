@@ -5,17 +5,13 @@ import { IoIosCafe } from "react-icons/io";
 import "../styles.css"
 const option=[
   {item_name:"Art"},
-
-
 ]
 const Followers=()=>{
-
     const[followi,setFollowi]=useState([])
     useEffect(()=>{
       follow()
     },[])
   
-    
     const follow=()=>{
       fetch('https://new-api.coco.gl/dashboard/intw/top/followers')
      .then(res=>res.json())
@@ -32,24 +28,15 @@ const Followers=()=>{
      return(
        <div className="box" key={item.instagramId} id={index}>
          <div className="main">
-
-         {/* <p>followingCount={item.followingCount} </p>
-  
-         <p>avgComment={item.avgComment}</p>
-         <p>totalPost={item.totalPost}</p>
-               <p>followerCount={item.followerCount} </p>
-         */}
           <nav>
           <Link to={`Details/${item.instagramId}`}>
             <div className="img1">
-             {/* {
-               if (alt==="profile") {
-                 
-               } else {
-                 
-               }
-             } */}
-            <img className="img" alt="profile" src={item.profilePic}/></div>
+        
+            <img className="img"   
+            onError={(e)=>{
+            e.target.src = 'https://www.stregasystem.com/img/users/user.png'
+              }}
+             alt="profile" src={item.profilePic}/></div>
            </Link>
           </nav> 
 
