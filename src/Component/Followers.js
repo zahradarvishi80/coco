@@ -1,32 +1,38 @@
-import React,{useState,useEffect} from "react";
+import React,{useEffect} from "react";
 import {Link} from "react-router-dom";
 import { AiOutlineMore } from "react-icons/ai";
 import { IoIosCafe } from "react-icons/io";
+import {setFollowers} from "../features/api/apiSlice";
+import { useDispatch,useSelector } from "react-redux";
 import "../styles.css"
+// import { bindActionCreators } from "@reduxjs/toolkit";
 const option=[
   {item_name:"Art"},
 ]
 const Followers=()=>{
-    const[followi,setFollowi]=useState([])
+    // const[followi,setFollowi]=useState([])
     useEffect(()=>{
       follow()
     },[])
   
+  const listFollowers=useSelector(state=>state.api.listFollowers)
+  const dispatch=useDispatch()
     const follow=()=>{
       fetch('https://new-api.coco.gl/dashboard/intw/top/followers')
      .then(res=>res.json())
      .then(json=>{
       console.log("Follow",json);
-      setFollowi(json)
+      // setFollowi(json)
+      dispatch(setFollowers(json))
      })
   }
   return(
     <div className="Engaged">
       
-    {followi.map((item,index)=>{
+    {listFollowers.map((item,index)=>{
    
      return(
-       <div className="box" key={item.instagramId} id={index}>
+       <div className="box"  key={item.instagramId} id={index}>
          <div className="main">
           <nav>
           <Link to={`Details/${item.instagramId}`}>
@@ -35,7 +41,7 @@ const Followers=()=>{
             <img className="img"   
             onError={(e)=>{
             e.target.src = 'https://www.stregasystem.com/img/users/user.png'
-              }}
+             }}
              alt="profile" src={item.profilePic}/></div>
            </Link>
           </nav> 
@@ -51,7 +57,6 @@ const Followers=()=>{
                    return(
                      <div>
                      <p className="position" key={index} id={i}>{i.item_name} </p>
-                
                      </div>
                    )
                  })
