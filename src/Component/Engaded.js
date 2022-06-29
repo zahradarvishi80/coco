@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import { AiOutlineMore } from "react-icons/ai";
 import { IoIosCafe } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
-import {setEngaded} from "../features/api/apiSlice"
+import {setEngaded} from "../redux/api/apiSlice"
 import "../styles.css"
 const option=[
   {item_name:"Art"},

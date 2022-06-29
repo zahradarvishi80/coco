@@ -2,7 +2,7 @@ import React,{useEffect} from "react";
 import {Link} from "react-router-dom";
 import { AiOutlineMore } from "react-icons/ai";
 import { IoIosCafe } from "react-icons/io";
-import {setFollowers} from "../features/api/apiSlice";
+import {setFollowers} from "../redux/api/apiSlice";
 import { useDispatch,useSelector } from "react-redux";
 import "../styles.css"
 // import { bindActionCreators } from "@reduxjs/toolkit";
